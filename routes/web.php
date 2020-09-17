@@ -17,9 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+//this is the way of defining the func
 Route::get('/annotate', [AnnotationController::class, 'displayForm']);
 Route::post('/annotate', [AnnotationController::class, 'annotateImage']);
 
+Route::post('/annotate', [AnnotationController::class, 'store']);
 // Route::get('/annotate', 'AnnotationController@displayForm');
 // Route::post('/annotate', 'AnnotationController@annotateImage');
